@@ -6,7 +6,7 @@
   <meta name="description" content="Apps simples, úteis e gratuitos para saúde, bem-estar e produtividade. Conheça a MSB Development.">
   <title>MSB Development</title>
 
-    <!-- Favicon -->
+  <!-- Favicon -->
   <link rel="icon" type="logo_ico" href="logo_ico.png">
 
   <style>
@@ -54,271 +54,147 @@
       padding: 1rem;
     }
     .ads-left, .ads-right {
-    position: fixed;
-    top: 120px;
-    width: 160px;
-    z-index: 1000;
+      position: fixed;
+      top: 120px;
+      width: 160px;
+      z-index: 1000;
     }
-    .ads-left {
-    left: 10px;
-    }
-    .ads-right {
-    right: 10px;
-    }
+    .ads-left { left: 10px; }
+    .ads-right { right: 10px; }
     @media (max-width: 768px) {
-    .ads-left, .ads-right {
-    display: none;
+      .ads-left, .ads-right { display: none; }
     }
-}  
+
+    /* Estilo das abas */
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .tab-button {
+      padding: 10px 16px;
+      background-color: #aab0fe;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .tab-button:hover { background-color: #bec4ff; }
+    .tab-button.active { background-color: #4549c0; }
+    .tab-content { animation: fadeIn 0.3s; }
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
   </style>
 </head>
-  
-  <header>
-    <img src="logo.png" alt="Logo MSB Development" style="max-width: 150px; height: auto; display: block; margin: 0 auto;">
-    <h3>Soluções criativas, simples e gratuitas*</h3>
-    <h5>*Contém anuncios minimamente invasivos</h5>
-  </header>
+<body>
 
-  <section>
-    <h2>Nossos Apps</h2>
+<header>
+  <img src="logo.png" alt="Logo MSB Development" style="max-width: 150px; height: auto; display: block; margin: 0 auto;">
+  <h3>Soluções criativas, simples e gratuitas*</h3>
+  <h5>*Contém anuncios minimamente invasivos</h5>
+</header>
 
-    <h3>Saúde e Bem-Estar</h3>
+<section>
+  <h2>Nossos Apps</h2>
 
+  <!-- Abas -->
+  <div class="tabs">
+    <button class="tab-button active" onclick="openTab(event, 'saude')">Saúde e Bem-Estar</button>
+    <button class="tab-button" onclick="openTab(event, 'educacao')">Educação</button>
+    <button class="tab-button" onclick="openTab(event, 'relaxing')">Relaxing Games</button>
+    <button class="tab-button" onclick="openTab(event, 'mini')">Mini Apps</button>
+  </div>
+
+  <!-- Conteúdo das abas -->
+  <div id="saude" class="tab-content" style="display:block;">
     <!-- Beba Água -->
     <div class="app" style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
-        <!-- Ícone do app -->
-        <img src="ic_launcher.png" alt="Ícone Beba Água" style="width: 48px; height: 48px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
-      
-        <!-- Texto e botão -->
-        <div>
-          <h3 style="margin: 0;">Beba Água!</h3>
-          <p style="margin: 4px 0 12px;">
-            Seu lembrete inteligente de hidratação! Registre com um toque, receba lembretes e acompanhe seu progresso diário de forma leve, simples e eficaz.</p>
-      
-          <!-- Botão com ícone da Play Store -->
-          <a class="button" href="https://play.google.com/store/apps/details?id=com.msbdevelopment.bebagua" target="_blank"
-             style="
-               display: inline-flex;
-               align-items: center;
-               gap: 8px;
-               background-color: #aab0fe;
-               color: white;
-               padding: 10px 16px;
-               border-radius: 8px;
-               text-decoration: none;
-               font-weight: bold;
-               font-family: sans-serif;
-               box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-               transition: background-color 0.3s ease;
-             "
-                    onmouseover="this.style.backgroundColor='#bec4ff'"
-                    onmouseout="this.style.backgroundColor='#aab0fe'">
-                   <!-- Ícone personalizado -->
-                   <img src="icon_play.png" alt="Play Store" style="width: 20px; height: 20px;">
-                   Baixar na Play Store
-                 </a>
-               </div>
-             </div>
+      <img src="ic_launcher.png" alt="Ícone Beba Água" style="width: 48px; height: 48px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
+      <div>
+        <h3 style="margin: 0;">Beba Água!</h3>
+        <p style="margin: 4px 0 12px;">
+          Seu lembrete inteligente de hidratação! Registre com um toque, receba lembretes e acompanhe seu progresso diário de forma leve, simples e eficaz.
+        </p>
+        <a class="button" href="https://play.google.com/store/apps/details?id=com.msbdevelopment.bebagua" target="_blank"
+           style="display: inline-flex; align-items: center; gap: 8px; background-color: #aab0fe; color: white; padding: 10px 16px; border-radius: 8px; text-decoration: none; font-weight: bold; font-family: sans-serif; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); transition: background-color 0.3s ease;"
+           onmouseover="this.style.backgroundColor='#bec4ff'"
+           onmouseout="this.style.backgroundColor='#aab0fe'">
+          <img src="icon_play.png" alt="Play Store" style="width: 20px; height: 20px;"> Baixar na Play Store
+        </a>
+      </div>
+    </div>
 
-             <!-- EcoHealthList -->
-             <div class="app" style="
-                 position: relative;
-                 border: 1px solid #d2d7ff;
-                 padding: 16px;
-                 border-radius: 12px;
-                 opacity: 0.6;
-                 pointer-events: none;
-                 filter: grayscale(0.3);
-               ">
-               <!-- Badge de status -->
-               <span style="
-                 position: absolute;
-                 top: 12px;
-                 right: 12px;
-                 background-color: #bec4ff;
-                 color: white;
-                 font-size: 12px;
-                 padding: 4px 8px;
-                 border-radius: 8px;
-                 font-weight: bold;
-                 box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-               ">
-                 Em desenvolvimento
-               </span>
-             
-               <!-- Conteúdo do app -->
-               <h3>EcoHealthList</h3>
-               <p>Faça escolhas mais saudáveis de maneira prática e eficaz.</p>
-               <p>*Projeto participante do Programa Santander X Explorer 1° edição 2025.</p>
-             </div>
-
-<h3>Educação</h3>      
-
-<!-- EcoHealthList -->
- <div class="app" style="
-   position: relative;
-   border: 1px solid #d2d7ff;
-   padding: 16px;
-   border-radius: 12px;
-   opacity: 0.6;
-   pointer-events: none;
-   filter: grayscale(0.3);
-   ">
-   <!-- Badge de status -->
-   <span style="
-   position: absolute;
-   top: 12px;
-   right: 12px;
-   background-color: #bec4ff;
-   color: white;
-   font-size: 12px;
-   padding: 4px 8px;
-   border-radius: 8px;
-   font-weight: bold;
-   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-   ">
-   Em desenvolvimento
- </span>
-             
- <!-- Conteúdo do app -->
- <h3>SkillSwap</h3>
- <p>O match perfeito entre quem quer ensinar e quem quer aprender.</p>
- <p>*Projeto participante do Programa Santander X Explorer 2° edição 2025.</p>
- </div>
-
-<h3>Relaxing Games</h3>
-
-<!-- BubblePop Relax -->
-<div class="app" style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
-  <!-- Ícone do app -->
-  <img src="ic_launcher_bubblepop.png" alt="Ícone BubblePop Relax" style="width: 48px; height: 48px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
-
-  <!-- Texto e botão -->
-  <div>
-    <h3 style="margin: 0;">BubblePop Relax</h3>
-    <p style="margin: 4px 0 12px;">
-      Um jogo relaxante que simula um plástico bolha infinito. Estoure bolhas, alivie o estresse e aproveite momentos de diversão leve onde estiver!</p>
-
-    <!-- Botão com ícone da Play Store -->
-    <a class="button" href="https://play.google.com/store/apps/details?id=com.msbdevelopment.bubblepop" target="_blank"
-       style="
-         display: inline-flex;
-         align-items: center;
-         gap: 8px;
-         background-color: #aab0fe;
-         color: white;
-         padding: 10px 16px;
-         border-radius: 8px;
-         text-decoration: none;
-         font-weight: bold;
-         font-family: sans-serif;
-         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-         transition: background-color 0.3s ease;
-       "
-        onmouseover="this.style.backgroundColor='#bec4ff'"
-        onmouseout="this.style.backgroundColor='#aab0fe'">
-       <img src="icon_play.png" alt="Play Store" style="width: 20px; height: 20px;">
-       Baixar na Play Store
-     </a>
-  </div>
-</div>
-
-
-    <!-- Color Collapse -->
-    <div class="app" style="
-    position: relative;
-    border: 1px solid #d2d7ff;
-    padding: 16px;
-    border-radius: 12px;
-    opacity: 0.6;
-    pointer-events: none;
-    filter: grayscale(0.3);
-    ">
-    <!-- Badge de status -->
-    <span style="
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background-color: #bec4ff;
-      color: white;
-      font-size: 12px;
-      padding: 4px 8px;
-      border-radius: 8px;
-      font-weight: bold;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    ">
-      Em desenvolvimento
-    </span>
-
-        <!-- Conteúdo do app -->
-    <h3>Color Collapse</h3>
-    <p>Um jogo viciante para combinar cores e se divertir!</p>
-  </div>
-  
-    <h3>Mini Apps</h3>
-    <!-- Contador Criativo -->
-    <div class="app" style="
-    position: relative;
-    border: 1px solid #d2d7ff;
-    padding: 16px;
-    border-radius: 12px;
-    opacity: 0.6;
-    pointer-events: none;
-    filter: grayscale(0.3);
-    ">
-    <!-- Badge de status -->
-    <span style="
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background-color: #bec4ff;
-      color: white;
-      font-size: 12px;
-      padding: 4px 8px;
-      border-radius: 8px;
-      font-weight: bold;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    ">
-      Em desenvolvimento
-    </span>
-  
-    <!-- Conteúdo do app -->
-    <h3>Contador Criativo</h3>
-    <p>Conte com estilo. Um contador diferente de tudo que você já viu!</p>
+    <!-- EcoHealthList -->
+    <div class="app" style="position: relative; border: 1px solid #d2d7ff; padding: 16px; border-radius: 12px; opacity: 0.6; pointer-events: none; filter: grayscale(0.3);">
+      <span style="position: absolute; top: 12px; right: 12px; background-color: #bec4ff; color: white; font-size: 12px; padding: 4px 8px; border-radius: 8px; font-weight: bold; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+        Em desenvolvimento
+      </span>
+      <h3>EcoHealthList</h3>
+      <p>Faça escolhas mais saudáveis de maneira prática e eficaz.</p>
+      <p>*Projeto participante do Programa Santander X Explorer 1° edição 2025.</p>
+    </div>
   </div>
 
-      <!-- Motivação Coletiva -->
-    <div class="app" style="
-    position: relative;
-    border: 1px solid #d2d7ff;
-    padding: 16px;
-    border-radius: 12px;
-    opacity: 0.6;
-    pointer-events: none;
-    filter: grayscale(0.3);
-    ">
-    <!-- Badge de status -->
-    <span style="
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background-color: #bec4ff;
-      color: white;
-      font-size: 12px;
-      padding: 4px 8px;
-      border-radius: 8px;
-      font-weight: bold;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    ">
-      Em desenvolvimento
-    </span>
-
-        <!-- Conteúdo do app -->
-    <h3>Motivação Coletiva</h3>
-    <p>Inspire-se, compartilhe e espalhe positividade!</p>
+  <div id="educacao" class="tab-content" style="display:none;">
+    <div class="app" style="position: relative; border: 1px solid #d2d7ff; padding: 16px; border-radius: 12px; opacity: 0.6; pointer-events: none; filter: grayscale(0.3);">
+      <span style="position: absolute; top: 12px; right: 12px; background-color: #bec4ff; color: white; font-size: 12px; padding: 4px 8px; border-radius: 8px; font-weight: bold; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+        Em desenvolvimento
+      </span>
+      <h3>SkillSwap</h3>
+      <p>O match perfeito entre quem quer ensinar e quem quer aprender.</p>
+      <p>*Projeto participante do Programa Santander X Explorer 2° edição 2025.</p>
+    </div>
   </div>
 
-  </section>
+  <div id="relaxing" class="tab-content" style="display:none;">
+    <div class="app" style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+      <img src="ic_launcher_bubblepop.png" alt="Ícone BubblePop Relax" style="width: 48px; height: 48px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
+      <div>
+        <h3 style="margin: 0;">BubblePop Relax</h3>
+        <p style="margin: 4px 0 12px;">
+          Um jogo relaxante que simula um plástico bolha infinito. Estoure bolhas, alivie o estresse e aproveite momentos de diversão leve onde estiver!
+        </p>
+        <a class="button" href="https://play.google.com/store/apps/details?id=com.msbdevelopment.bubblepop" target="_blank"
+           style="display: inline-flex; align-items: center; gap: 8px; background-color: #aab0fe; color: white; padding: 10px 16px; border-radius: 8px; text-decoration: none; font-weight: bold; font-family: sans-serif; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); transition: background-color 0.3s ease;"
+           onmouseover="this.style.backgroundColor='#bec4ff'"
+           onmouseout="this.style.backgroundColor='#aab0fe'">
+          <img src="icon_play.png" alt="Play Store" style="width: 20px; height: 20px;"> Baixar na Play Store
+        </a>
+      </div>
+    </div>
+
+    <div class="app" style="position: relative; border: 1px solid #d2d7ff; padding: 16px; border-radius: 12px; opacity: 0.6; pointer-events: none; filter: grayscale(0.3);">
+      <span style="position: absolute; top: 12px; right: 12px; background-color: #bec4ff; color: white; font-size: 12px; padding: 4px 8px; border-radius: 8px; font-weight: bold; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+        Em desenvolvimento
+      </span>
+      <h3>Color Collapse</h3>
+      <p>Um jogo viciante para combinar cores e se divertir!</p>
+    </div>
+  </div>
+
+  <div id="mini" class="tab-content" style="display:none;">
+    <div class="app" style="position: relative; border: 1px solid #d2d7ff; padding: 16px; border-radius: 12px; opacity: 0.6; pointer-events: none; filter: grayscale(0.3);">
+      <span style="position: absolute; top: 12px; right: 12px; background-color: #bec4ff; color: white; font-size: 12px; padding: 4px 8px; border-radius: 8px; font-weight: bold; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+        Em desenvolvimento
+      </span>
+      <h3>Motivação Coletiva</h3>
+      <p>Inspire-se, compartilhe e espalhe positividade!</p>
+    </div>
+  </div>
+</section>
+
+<script>
+function openTab(evt, tabName) {
+  const contents = document.getElementsByClassName("tab-content");
+  for (let i = 0; i < contents.length; i++) { contents[i].style.display = "none"; }
+  const buttons = document.getElementsByClassName("tab-button");
+  for (let i = 0; i < buttons.length; i++) { buttons[i].classList.remove("active"); }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.classList.add("active");
+}
+</script>
 
   <section>
     <h2>Sobre nós</h2>
@@ -402,8 +278,53 @@
 
   <footer>
     <p>&copy; 2025 MSB Development — Todos os direitos reservados</p>
-    <p><a style="color: #aaa" href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a>
-      | <a style="color: #aaa" href="mailto:msb.development2025@gmail.com?subject=Contato%20MSB%20">Contato</a>
+
+    <div style="margin: 10px 0;">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/developmentmsb" target="_blank" style="margin: 0 8px; color: white; text-decoration: none;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+          <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 
+          0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm0-2h10c3.86 0 7 
+          3.14 7 7v10c0 3.86-3.14 7-7 
+          7H7c-3.86 0-7-3.14-7-7V7C0 3.14 3.14 
+          0 7 0zm5 6a6 6 0 100 12 6 6 0 000-12zm0 
+          2a4 4 0 110 8 4 4 0 010-8zm6.5-3a1.5 
+          1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+        </svg>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/company/msb-development/" target="_blank" style="margin: 0 8px; color: white; text-decoration: none;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+          <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 
+          6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 
+          2.48 2.5zM0 24h5V7H0v17zM8 7h4.8v2.5h.07c.67-1.27 
+          2.3-2.6 4.73-2.6 5.05 0 6 3.32 
+          6 7.63V24h-5v-7.62c0-1.82-.03-4.16-2.54-4.16-2.54 
+          0-2.93 1.98-2.93 4.03V24H8V7z"/>
+        </svg>
+      </a>
+
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@msb.development" target="_blank" style="margin: 0 8px; color: white; text-decoration: none;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+          <path d="M12 2h4.35c.31 2.5 2.11 4.47 
+          4.65 4.9v4.32c-1.59-.05-3.07-.52-4.35-1.34v7.43c0 
+          3.49-2.83 6.33-6.32 6.33S4 20.8 4 
+          17.31c0-3.49 2.83-6.32 6.33-6.32.43 
+          0 .85.04 1.25.13v4.38c-.4-.13-.82-.21-1.25-.21-1.62 
+          0-2.94 1.32-2.94 2.95 0 1.62 1.32 2.94 
+          2.94 2.94 1.62 0 2.95-1.32 
+          2.95-2.94V2z"/>
+        </svg>
+      </a>
+    </div>
+
+    <p>
+      <a style="color: #aaa" href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> |
+      <a style="color: #aaa" href="mailto:msb.development2025@gmail.com?subject=Contato%20MSB%20">Contato</a>
+    </p>
   </footer>
+
 </body>
 </html>
