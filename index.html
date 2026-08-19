@@ -108,35 +108,79 @@
     <button class="tab-button" onclick="openTab(event, 'mini')">Mini Apps</button>
   </div>
 
-  <!-- Conteúdo das abas -->
-  <div id="saude" class="tab-content" style="display:block;">
-    <!-- Beba Água -->
-    <div class="app" style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
-      <img src="ic_launcher.png" alt="Ícone Beba Água" style="width: 48px; height: 48px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
-      <div>
-        <h3 style="margin: 0;">Beba Água!</h3>
-        <p style="margin: 4px 0 12px;">
-          Seu lembrete inteligente de hidratação! Registre com um toque, receba lembretes e acompanhe seu progresso diário de forma leve, simples e eficaz.
-        </p>
-        <a class="button" href="https://play.google.com/store/apps/details?id=com.msbdevelopment.bebagua" target="_blank"
+<!-- Conteúdo das abas -->
+<div id="saude" class="tab-content" style="display:block;">
+
+  <!-- Beba Água -->
+  <div class="app" style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+
+    <img src="ic_launcher.png"
+         alt="Ícone Beba Água"
+         style="width: 48px; height: 48px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
+
+    <div>
+      <h3 style="margin: 0;">Beba Água!</h3>
+
+      <p style="margin: 4px 0 12px;">
+        Seu lembrete inteligente de hidratação! Registre com um toque, receba lembretes e acompanhe seu progresso diário de forma leve, simples e eficaz.
+      </p>
+
+      <!-- Botões -->
+      <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+
+        <!-- Botão Play Store -->
+        <a class="button"
+           href="https://play.google.com/store/apps/details?id=com.msbdevelopment.bebagua"
+           target="_blank"
+           rel="noopener noreferrer"
            style="display: inline-flex; align-items: center; gap: 8px; background-color: #aab0fe; color: white; padding: 10px 16px; border-radius: 8px; text-decoration: none; font-weight: bold; font-family: sans-serif; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); transition: background-color 0.3s ease;"
            onmouseover="this.style.backgroundColor='#bec4ff'"
            onmouseout="this.style.backgroundColor='#aab0fe'">
-          <img src="icon_play.png" alt="Play Store" style="width: 20px; height: 20px;"> Baixar na Play Store
+
+          <img src="icon_play.png"
+               alt="Play Store"
+               style="width: 20px; height: 20px;">
+
+          Baixar na Play Store
         </a>
+
+        <!-- Botão Política de Privacidade -->
+        <a class="button"
+           href="politica-de-privacidade_bebaagua.html"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="display: inline-flex; align-items: center; gap: 8px; background-color: #6f75d9; color: white; padding: 10px 16px; border-radius: 8px; text-decoration: none; font-weight: bold; font-family: sans-serif; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); transition: background-color 0.3s ease;"
+           onmouseover="this.style.backgroundColor='#858be8'"
+           onmouseout="this.style.backgroundColor='#6f75d9'">
+
+          Política de Privacidade
+        </a>
+
       </div>
     </div>
-
-    <!-- EcoHealthList -->
-    <div class="app" style="position: relative; border: 1px solid #d2d7ff; padding: 16px; border-radius: 12px; opacity: 0.6; pointer-events: none; filter: grayscale(0.3);">
-      <span style="position: absolute; top: 12px; right: 12px; background-color: #bec4ff; color: white; font-size: 12px; padding: 4px 8px; border-radius: 8px; font-weight: bold; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-        Em desenvolvimento
-      </span>
-      <h3>EcoHealthList</h3>
-      <p>Faça escolhas mais saudáveis de maneira prática e eficaz.</p>
-      <p>*Projeto participante do Programa Santander X Explorer 1° edição 2025.</p>
-    </div>
   </div>
+
+
+  <!-- EcoHealthList -->
+  <div class="app"
+       style="position: relative; border: 1px solid #d2d7ff; padding: 16px; border-radius: 12px; opacity: 0.6; pointer-events: none; filter: grayscale(0.3);">
+
+    <span style="position: absolute; top: 12px; right: 12px; background-color: #bec4ff; color: white; font-size: 12px; padding: 4px 8px; border-radius: 8px; font-weight: bold; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      Em desenvolvimento
+    </span>
+
+    <h3>EcoHealthList</h3>
+
+    <p>
+      Faça escolhas mais saudáveis de maneira prática e eficaz.
+    </p>
+
+    <p>
+      *Projeto participante do Programa Santander X Explorer 1° edição 2025.
+    </p>
+
+  </div>
+</div>
 
   <div id="educacao" class="tab-content" style="display:none;">
     <div class="app" style="position: relative; border: 1px solid #d2d7ff; padding: 16px; border-radius: 12px; opacity: 0.6; pointer-events: none; filter: grayscale(0.3);">
@@ -175,8 +219,8 @@
            style="display: inline-flex; align-items: center; gap: 8px; background-color: #aab0fe; color: white; padding: 10px 16px; border-radius: 8px; text-decoration: none; font-weight: bold; font-family: sans-serif; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); transition: background-color 0.3s ease;"
            onmouseover="this.style.backgroundColor='#bec4ff'"
            onmouseout="this.style.backgroundColor='#aab0fe'">
-
-          <img src="icon_play.png"
+           
+              <img src="icon_play.png"
                alt="Play Store"
                style="width: 20px; height: 20px;">
 
